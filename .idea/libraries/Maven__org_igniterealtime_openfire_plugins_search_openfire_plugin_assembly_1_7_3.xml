@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.igniterealtime.openfire.plugins:search:openfire-plugin-assembly:1.7.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/igniterealtime/openfire/plugins/search/1.7.3/search-1.7.3-openfire-plugin-assembly.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/igniterealtime/openfire/plugins/search/1.7.3/search-1.7.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/igniterealtime/openfire/plugins/search/1.7.3/search-1.7.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

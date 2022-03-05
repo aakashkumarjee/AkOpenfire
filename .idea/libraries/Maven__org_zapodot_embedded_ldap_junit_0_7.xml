@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.zapodot:embedded-ldap-junit:0.7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/zapodot/embedded-ldap-junit/0.7/embedded-ldap-junit-0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/zapodot/embedded-ldap-junit/0.7/embedded-ldap-junit-0.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/zapodot/embedded-ldap-junit/0.7/embedded-ldap-junit-0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

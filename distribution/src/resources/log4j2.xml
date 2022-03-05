@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration monitorInterval="30">
+    <Appenders>
+        <!-- Modifying this appender is likely to break the log viewer that is part of the Openfire admin console.
+           - If you'd like to have a differently formatted log file, it is advisable to create a new log file, by
+           - duplicating this configuration, instead of changing it.
+          -->
+        <RollingFile name="openfire" fileName="${sys:openfireHome}/logs/openfire.log" filePattern="${sys:openfireHome}/logs/openfire.log-%i">
+            <PatternLayout>
+                <Pattern>%d{yyyy.MM.dd HH:mm:ss} %highlight{%-5p} [%t]: %c - %msg{nolookups}%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+        </RollingFile>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%msg{nolookups}%n%throwable{0}"/>
+        </Console>
+        
+    </Appenders>
+
+    <Loggers>
+        <!-- OF-1095: Uniform output of loading/unloading of plugins to std-out. -->
+        <Logger name="org.jivesoftware.openfire.container.PluginManager">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="org.jivesoftware.openfire.container.PluginMonitor">
+            <AppenderRef ref="console"/>
+        </Logger>
+
+        <!-- OF-506: Jetty INFO messages are generally not useful. Ignore them by default. -->
+        <Logger name="org.eclipse.jetty" level="warn"/>
+
+        <Root level="info">
+            <AppenderRef ref="openfire"/>
+        </Root>
+    </Loggers>
+</Configuration>
